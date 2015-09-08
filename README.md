@@ -18,9 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-   irb> require 'mtodos'
-   irb> cli = MTodos::Client.new 'https://udd.debian.org/dmd/?email1=mkouhei%40palmtb.net&format=json'
-   irb> cli.retrieve
+    irb> require 'mtodos'
+    irb> cli = MTodos::Client.new 'https://udd.debian.org/dmd/?email1=mkouhei%40palmtb.net&format=json'
+    irb> cli.retrieve
 
 ## Development
 
