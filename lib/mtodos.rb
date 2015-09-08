@@ -3,12 +3,15 @@ require "json"
 require "memcached"
 require "mtodos/version"
 
+
 module MTodos
 
   class Cache
+
+    @@cache_filename = 'mtodos.cache'
     
     def initialize
-      @cache_file = File.join(Dir::pwd, "mtodos.cache")
+      @cache_file = File.join(Dir::pwd, @@cache_filename)
       if File.file?(@cache_file)
         @hash = Marshal.load(File.read(@cache_file))
       else
