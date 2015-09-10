@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'mtodos'
+
 
 describe Mtodos do
   it 'has a version number' do
