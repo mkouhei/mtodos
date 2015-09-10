@@ -1,10 +1,13 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'simplecov'
+require 'coveralls'
 
 
 SimpleCov.start do
   add_filter '/\.bundle/'
 end
+
+Coveralls.wear!
 
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
