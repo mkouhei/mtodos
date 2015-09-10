@@ -7,7 +7,8 @@ describe Mtodos do
     expect(Mtodos::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'initialize Client with cache file' do
+    Mtodos::Client.new('http://d.palmtb.net/_static/glaneuses.json')
+    expect(File.exist?('mtodos.cache')).to eq(true)
   end
 end
