@@ -1,14 +1,23 @@
 require 'spec_helper'
+require 'webmock'
 require 'mtodos'
+
+include WebMock::API
 
 
 describe Mtodos do
+  data = File.read('spec/udd.debian.org.json')
+  stub_request(:any, 'udd.debian.org').to_return(
+    :body => data,
+    :status => 200,
+    :headers => {'Content-Length' => 7632}
+  )
   it 'has a version number' do
     expect(Mtodos::VERSION).not_to be nil
   end
 
   it 'initialize Client with cache file' do
-    Mtodos::Client.new('http://d.palmtb.net/_static/glaneuses.json')
+    Mtodos::Client.new('https://udd.debian.org/dmd/?email1=mkouhei%40palmtb.net&format=json#todo')
     expect(File.exist?('mtodos.cache')).to eq(true)
   end
 end
