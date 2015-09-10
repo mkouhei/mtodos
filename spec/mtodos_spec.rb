@@ -6,7 +6,7 @@ include WebMock::API
 
 
 describe Mtodos do
-  data = File.read('spec/udd.debian.org.json')
+  data = File.read('spec/data/udd.debian.org.json')
   stub_request(:any, 'udd.debian.org').to_return(
     :body => data,
     :status => 200,
@@ -17,7 +17,7 @@ describe Mtodos do
   end
 
   it 'initialize Client with cache file' do
-    Mtodos::Client.new('https://udd.debian.org/dmd/?email1=mkouhei%40palmtb.net&format=json#todo')
+    Mtodos::Client.new('https://udd.debian.org/dmd/?email1=dummy%40example.org&format=json#todo')
     expect(File.exist?('mtodos.cache')).to eq(true)
   end
 end

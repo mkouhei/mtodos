@@ -9,7 +9,7 @@
     ":updated": {
       "^t": 1441802898
     },
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "rc_std_f091c6a1583a4f3648991ad47b67501a",
@@ -21,7 +21,7 @@
     ":updated": {
       "^t": 1441802896
     },
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "rc_std_87b5328fc6e4b58d7da73dd6ebae9997",
@@ -33,7 +33,7 @@
     ":updated": {
       "^t": 1441846446
     },
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "rc_std_c8f7be813b60241bc590926f86cd0f7d",
@@ -45,7 +45,7 @@
     ":updated": {
       "^t": 1441891986
     },
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "vcs_a586b5acb5a2f9f22e6fabe567fe5bc4",
@@ -54,7 +54,7 @@
     ":link": "http://anonscm.debian.org/gitweb/?p=openstack/backup2swift.git",
     ":description": "New version",
     ":details": " ready for upload",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_fe0e468b3f010271c7a6963bd4727efb",
@@ -63,7 +63,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  http://pypi.python.org/packages/source/s/sphinxcontrib-nwdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_488f3d00e30247919fb99edffd0f5d8e",
@@ -72,7 +72,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  http://pypi.python.org/packages/source/s/sphinxcontrib-blockdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_26c5c686a73948e03ed5f77353e0e8a0",
@@ -81,7 +81,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  https://pypi.python.org/packages/source/n/nwdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_1c978829f67c21014a3665f00232013b",
@@ -90,7 +90,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  http://pypi.python.org/packages/source/s/swiftsc/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "newupstream_0ad0e1e9912b4e1745864456991a7901",
@@ -99,7 +99,7 @@
     ":link": null,
     ":description": "New version available",
     ":details": "0.1.3",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_5b48e0fa6a7d5d87abde7ff709e58086",
@@ -108,7 +108,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  http://pypi.python.org/packages/source/b/backup2swift/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_c81f8694c8b2e63bfdeea18319e0384a",
@@ -117,7 +117,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  https://pypi.python.org/packages/source/b/blockdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_cf1434bf751dcd7215b39f61493d7d6e",
@@ -126,7 +126,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  http://pypi.python.org/packages/source/s/sphinxcontrib-seqdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "newupstream_6d5778f1a5fabcc09f4759c0c1cc521b",
@@ -135,7 +135,7 @@
     ":link": null,
     ":description": "New version available",
     ":details": "1.3",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_97ef59e09d1ab5e07b2f5d32104148d2",
@@ -144,7 +144,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  https://pypi.python.org/packages/source/s/seqdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_ef1c4409d1a4ece692196f5d5d6f7067",
@@ -153,7 +153,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  https://pypi.python.org/packages/source/a/actdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "scanerror_d008414a08dcfcafa14d35523bfb1991",
@@ -162,7 +162,7 @@
     ":link": null,
     ":description": "debian/watch: uscan returned an error",
     ":details": "uscan warning: reading webpage\n  http://pypi.python.org/packages/source/s/sphinxcontrib-actdiag/ failed: 404 Not Found",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_sphinxcontrib-nwdiag_0.9.0-1.1_1444394896",
@@ -171,7 +171,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: )",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_sphinxcontrib-blockdiag_1.5.0-1.1_1444394898",
@@ -180,7 +180,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: )",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_nwdiag_1.0.3-3_1444394896",
@@ -189,7 +189,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: #796429)",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_blockdiag_1.4.7-1_1444394898",
@@ -198,7 +198,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: #796371)",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_sphinxcontrib-seqdiag_0.8.0-1.1_1444394898",
@@ -207,7 +207,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: )",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_seqdiag_0.9.3-4_1444394898",
@@ -216,7 +216,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: #796481)",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_actdiag_0.5.3-4_1444394898",
@@ -225,7 +225,7 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: )",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   },
   {
     ":shortname": "autoremoval_sphinxcontrib-actdiag_0.8.0-1.1_1444394898",
@@ -234,6 +234,6 @@
     ":link": null,
     ":description": "Testing auto-removal",
     ":details": "on 2015-10-09 (bug: )",
-    ":reason": "Maintained by mkouhei@palmtb.net"
+    ":reason": "Maintained by dummy@example.org"
   }
 ]
