@@ -4,7 +4,7 @@ require "memcached"
 require "mtodos/version"
 
 
-module MTodos
+module Mtodos
 
   class Cache
 
