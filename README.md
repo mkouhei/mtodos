@@ -1,5 +1,10 @@
 # MTodos (Debian pacakge Maintainer ToDo notifier)
 
+## Status
+
+[![Build Status](https://travis-ci.org/mkouhei/mtodos.svg)](https://travis-ci.org/mkouhei/mtodos)
+[![Coverage Status](https://coveralls.io/repos/mkouhei/mtodos/badge.svg?branch=master&service=github)](https://coveralls.io/github/mkouhei/mtodos?branch=master)
+
 ## Installation
 
 Add this line to your application's Gemfile:
