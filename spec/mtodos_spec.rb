@@ -30,4 +30,10 @@ describe Mtodos do
     cli = Mtodos::Client.new(UDD)
     expect(File.exist?('mtodos.cache')).to eq(true)
   end
+
+  it 'store the key in cache after retrieve' do
+    cli = Mtodos::Client.new(UDD)
+    cli.retrieve
+    expect(cli.is_sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+  end
 end
