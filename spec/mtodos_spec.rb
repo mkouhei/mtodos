@@ -22,9 +22,7 @@ describe Mtodos do
                :headers => {'Content-Length' => 10756})
 
   after do
-    if File.exist?('mtodos.cache')
-      File.unlink('mtodos.cache')
-    end
+    File.exist?('mtodos.cache') && File.unlink('mtodos.cache')
   end
 
   it 'has a version number' do
