@@ -61,7 +61,7 @@ module Mtodos
       end
     end
 
-    def retrieve()
+    def retrieve
       json_data = JSON.parse(Net::HTTP.get(URI.parse(@url)))
       if @resouce_type == 'udd'
         data_array = json_data
