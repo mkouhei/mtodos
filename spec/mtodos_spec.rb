@@ -32,7 +32,7 @@ describe Mtodos do
   end
 
   it 'initialize Client with cache file' do
-    cli = Mtodos::Client.new(UDD)
+    Mtodos::Client.new(UDD)
     expect(File.exist?('mtodos.cache')).to eq(true)
   end
 
