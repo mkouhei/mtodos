@@ -54,7 +54,7 @@ module Mtodos
         end
       end
 
-      if url =~ /:\/\/udd.debian.org\//
+      if url =~ %r{://udd.debian.org/}
         @resouce_type = 'udd'
       elsif url =~ /glaneuses.json/
         @resouce_type = 'glaneuses'
