@@ -1,7 +1,7 @@
-require "net/http"
-require "json"
-require "memcached"
-require "mtodos/version"
+require 'net/http'
+require 'json'
+require 'memcached'
+require 'mtodos/version'
 
 
 module Mtodos
@@ -55,9 +55,9 @@ module Mtodos
       end
 
       if url =~ /:\/\/udd.debian.org\//
-        @resouce_type = "udd"
+        @resouce_type = 'udd'
       elsif url =~ /glaneuses.json/
-        @resouce_type = "glaneuses"
+        @resouce_type = 'glaneuses'
       end
     end
 
@@ -66,7 +66,7 @@ module Mtodos
       if @resouce_type == 'udd'
         data_array = json_data
       elsif @resouce_type == 'glaneuses'
-        data_array = json_data["udd"]
+        data_array = json_data['udd']
       end
       data_array.select {
         |todo| todo if is_critical?(todo) and !sent?(todo[':shortname'])
@@ -76,8 +76,8 @@ module Mtodos
     end
 
     def is_critical?(todo)
-      return (todo[":type"] == "RC bug" ||
-              todo[":type"] == "testing auto-removal") ? true : false
+      return (todo[':type'] == 'RC bug' ||
+              todo[':type'] == 'testing auto-removal') ? true : false
     end
 
     def sent?(key)
