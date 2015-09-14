@@ -12,7 +12,7 @@ module Mtodos
       if File.file?(@cache_file)
         @hash = Marshal.load(File.read(@cache_file))
       else
-        @hash = Hash.new
+        @hash = {}
         File.write(@cache_file, Marshal.dump(@hash))
       end
     end
@@ -28,7 +28,7 @@ module Mtodos
       begin
         @hash = Marshal.load(File.read(@cache_file))
       rescue Errno::ENOENT
-        @hash = Hash.new
+        @hash = {}
       end
       if @hash[key]
         result = true
