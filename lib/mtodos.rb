@@ -5,9 +5,7 @@ require "mtodos/version"
 
 
 module Mtodos
-
   class Cache
-
     @@cache_filename = 'mtodos.cache'
 
     def initialize
@@ -44,7 +42,6 @@ module Mtodos
 
 
   class Client
-
     def initialize(url, cache_file: true, memcached_server: nil)
       @url = url
       if cache_file
@@ -108,6 +105,5 @@ module Mtodos
       puts todo[':shortname']
       store(todo[':shortname'])
     end
-
   end
 end
