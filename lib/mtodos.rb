@@ -69,7 +69,7 @@ module Mtodos
         data_array = json_data['udd']
       end
       data_array.select {
-        |todo| todo if critical?(todo) and !sent?(todo[':shortname'])
+        |todo| todo if critical?(todo) && !sent?(todo[':shortname'])
       }.each do |todo|
         notify(todo)
       end
