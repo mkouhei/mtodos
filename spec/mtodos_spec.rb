@@ -19,7 +19,7 @@ describe Mtodos do
   stub_request(:any, 'example.org/glaneuses.json')
     .to_return(:body => glaneuses,
                :status => 200,
-               :headers => { 'Content-Length' => 10756 })
+               :headers => { 'Content-Length' => 10_756 })
 
   after do
     File.exist?('mtodos.cache') && File.unlink('mtodos.cache')
