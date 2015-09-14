@@ -11,15 +11,15 @@ describe Mtodos do
   data = File.read('spec/data/udd.debian.org.json')
   glaneuses = File.read('spec/data/glaneuses.json')
   stub_request(:any, 'udd.debian.org/dmd/')
-    .with(:query => { :email1 => 'dummy@example.org',
-                      :format => 'json' })
-    .to_return(:body => data,
-               :status => 200,
-               :headers => { 'Content-Length' => 7632 })
+    .with(query: { email1: 'dummy@example.org',
+                   format: 'json' })
+    .to_return(body: data,
+               status: 200,
+               headers: { 'Content-Length' => 7632 })
   stub_request(:any, 'example.org/glaneuses.json')
-    .to_return(:body => glaneuses,
-               :status => 200,
-               :headers => { 'Content-Length' => 10_756 })
+    .to_return(body: glaneuses,
+               status: 200,
+               headers: { 'Content-Length' => 10_756 })
 
   after do
     File.exist?('mtodos.cache') && File.unlink('mtodos.cache')
