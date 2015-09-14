@@ -3,7 +3,6 @@ require 'json'
 require 'memcached'
 require 'mtodos/version'
 
-
 module Mtodos
   class Cache
     @@cache_filename = 'mtodos.cache'
@@ -39,7 +38,6 @@ module Mtodos
       return result
     end
   end
-
 
   class Client
     def initialize(url, cache_file: true, memcached_server: nil)
