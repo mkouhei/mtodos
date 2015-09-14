@@ -76,7 +76,8 @@ module Mtodos
     end
 
     def is_critical?(todo)
-      return (todo[":type"] == "RC bug" || todo[":type"] == "testing auto-removal") ? true : false
+      return (todo[":type"] == "RC bug" ||
+              todo[":type"] == "testing auto-removal") ? true : false
     end
 
     def sent?(key)
