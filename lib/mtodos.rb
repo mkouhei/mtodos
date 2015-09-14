@@ -9,7 +9,7 @@ module Mtodos
   class Cache
 
     @@cache_filename = 'mtodos.cache'
-    
+
     def initialize
       @cache_file = File.join(Dir::pwd, @@cache_filename)
       if File.file?(@cache_file)
@@ -19,9 +19,9 @@ module Mtodos
         File.write(@cache_file, Marshal.dump(@hash))
       end
     end
-    
+
     class NotFound < Exception; end
-    
+
     def set(key, value)
       @hash[key] = value
       File.write(@cache_file, Marshal.dump(@hash))
@@ -42,7 +42,7 @@ module Mtodos
     end
   end
 
-  
+
   class Client
 
     def initialize(url, cache_file: true, memcached_server: nil)
@@ -56,7 +56,7 @@ module Mtodos
           @cache = Memcached.new(memcached_server)
         end
       end
-      
+
       if url =~ /:\/\/udd.debian.org\//
         @resouce_type = "udd"
       elsif url =~ /glaneuses.json/
@@ -108,6 +108,6 @@ module Mtodos
       puts todo[':shortname']
       store(todo[':shortname'])
     end
-    
+
   end
 end

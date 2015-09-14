@@ -26,7 +26,7 @@ describe Mtodos do
       File.unlink('mtodos.cache')
     end
   end
-  
+
   it 'has a version number' do
     expect(Mtodos::VERSION).not_to be nil
   end
