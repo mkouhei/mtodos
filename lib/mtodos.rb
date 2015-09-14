@@ -13,7 +13,7 @@ module Mtodos
       if File.file?(@cache_file)
         @hash = Marshal.load(File.read(@cache_file))
       else
-        @hash = Hash.new()
+        @hash = Hash.new
         File.write(@cache_file, Marshal.dump(@hash))
       end
     end
@@ -29,7 +29,7 @@ module Mtodos
       begin
         @hash = Marshal.load(File.read(@cache_file))
       rescue Errno::ENOENT
-        @hash = Hash.new()
+        @hash = Hash.new
       end
       if @hash[key]
         result = true
@@ -45,7 +45,7 @@ module Mtodos
     def initialize(url, cache_file: true, memcached_server: nil)
       @url = url
       if cache_file
-        @cache = Cache.new()
+        @cache = Cache.new
       else
         if memcached_server.nil?
           @cache = Memcached.new('localhost:11211')
