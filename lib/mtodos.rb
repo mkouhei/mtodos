@@ -69,7 +69,7 @@ module Mtodos
         data_array = json_data["udd"]
       end
       data_array.select {
-        |todo| todo if is_critical?(todo) and !is_sent?(todo[':shortname'])
+        |todo| todo if is_critical?(todo) and !sent?(todo[':shortname'])
       }.each do |todo|
         notify(todo)
       end
@@ -79,7 +79,7 @@ module Mtodos
       return (todo[":type"] == "RC bug" || todo[":type"] == "testing auto-removal") ? true : false
     end
 
-    def is_sent?(key)
+    def sent?(key)
       begin
         result = @cache.get(key)
       rescue Cache::NotFound

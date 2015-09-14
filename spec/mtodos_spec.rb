@@ -39,12 +39,12 @@ describe Mtodos do
   it 'store the key in cache after retrieve from udd' do
     cli = Mtodos::Client.new(UDD)
     cli.retrieve
-    expect(cli.is_sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+    expect(cli.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
   end
 
   it 'store the key in cache after retrieve from glaneuses' do
     cli = Mtodos::Client.new(GLANEUSES)
     cli.retrieve
-    expect(cli.is_sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+    expect(cli.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
   end
 end
