@@ -33,7 +33,7 @@ module Mtodos
       if @hash[key]
         result = true
       else
-        raise NotFound, 'NotFound key'
+        fail NotFound, 'NotFound key'
       end
       return result
     end
