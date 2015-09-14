@@ -4,6 +4,7 @@ rootdir=$(git rev-parse --show-toplevel)
 cd $rootdir
 (
     bundle install --path .bundle
+    bundle exec rake rubocop
     bundle exec rake spec
     rm -f mtodos.cache
 )
