@@ -5,10 +5,10 @@ require 'mtodos/version'
 
 module Mtodos
   class Cache
-    @@cache_filename = 'mtodos.cache'
 
     def initialize
-      @cache_file = File.join(Dir.pwd, @@cache_filename)
+      @cache_filename = 'mtodos.cache'
+      @cache_file = File.join(Dir.pwd, @cache_filename)
       if File.file?(@cache_file)
         @hash = Marshal.load(File.read(@cache_file))
       else
