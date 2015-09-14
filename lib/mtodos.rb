@@ -69,13 +69,13 @@ module Mtodos
         data_array = json_data['udd']
       end
       data_array.select {
-        |todo| todo if is_critical?(todo) and !sent?(todo[':shortname'])
+        |todo| todo if critical?(todo) and !sent?(todo[':shortname'])
       }.each do |todo|
         notify(todo)
       end
     end
 
-    def is_critical?(todo)
+    def critical?(todo)
       return (todo[':type'] == 'RC bug' ||
               todo[':type'] == 'testing auto-removal') ? true : false
     end
