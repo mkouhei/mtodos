@@ -30,12 +30,15 @@ module Mtodos
       rescue Errno::ENOENT
         @hash = {}
       end
+      having?(key)
+    end
+
+    def having?(key)
       if @hash[key]
-        result = true
+        true
       else
         fail NotFound, 'NotFound key'
       end
-      return result
     end
   end
 
