@@ -4,6 +4,7 @@ require 'memcached'
 require 'mtodos/version'
 
 module Mtodos
+  # Local cache
   class Cache
     def initialize
       @cache_filename = 'mtodos.cache'
@@ -38,6 +39,7 @@ module Mtodos
     end
   end
 
+  # retrieving ToDo and send notification client
   class Client
     def initialize(url, cache_file: true, memcached_server: nil)
       @url = url
