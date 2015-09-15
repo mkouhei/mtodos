@@ -103,11 +103,9 @@ module Mtodos
     end
 
     def store(key)
-      begin
-        @cache.set(key, true)
-      rescue Memcached::ServerIsMarkedDead => e
-        puts e
-      end
+      @cache.set(key, true)
+    rescue Memcached::ServerIsMarkedDead => e
+      puts e
     end
 
     def notify(todo)
