@@ -5,7 +5,6 @@ require 'mtodos/version'
 
 module Mtodos
   class Cache
-
     def initialize
       @cache_filename = 'mtodos.cache'
       @cache_file = File.join(Dir.pwd, @cache_filename)
