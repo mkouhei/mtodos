@@ -46,17 +46,21 @@ module Mtodos
       if cache_file
         @cache = Cache.new
       else
-        if memcached_server.nil?
-          @cache = Memcached.new('localhost:11211')
-        else
-          @cache = Memcached.new(memcached_server)
-        end
+        initialize_memcache(memcached_server)
       end
 
       if url =~ %r{://udd.debian.org/}
         @resouce_type = 'udd'
       elsif url =~ /glaneuses.json/
         @resouce_type = 'glaneuses'
+      end
+    end
+
+    def initialize_memcache(memcached_server)
+      if memcached_server.nil?
+        @cache = Memcached.new('localhost:11211')
+      else
+        @cache = Memcached.new(memcached_server)
       end
     end
 
