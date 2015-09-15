@@ -90,16 +90,13 @@ module Mtodos
     end
 
     def sent?(key)
-      begin
-        result = @cache.get(key)
-      rescue Cache::NotFound
-        result = false
-      rescue Memcached::NotFound
-        result = false
-      rescue Memcached::ServerIsMarkedDead
-        result = false
-      end
-      return result
+      @cache.get(key)
+    rescue Cache::NotFound
+      false
+    rescue Memcached::NotFound
+      false
+    rescue Memcached::ServerIsMarkedDead
+      false
     end
 
     def store(key)
