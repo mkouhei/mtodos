@@ -67,10 +67,14 @@ module Mtodos
       elsif @resouce_type == 'glaneuses'
         data_array = json_data['udd']
       end
+      filter(data_array).each do |todo|
+        notify(todo)
+      end
+    end
+
+    def filter(data_array)
       data_array.select do |todo|
         todo if critical?(todo) && !sent?(todo[':shortname'])
-      end.each do |todo|
-        notify(todo)
       end
     end
 
