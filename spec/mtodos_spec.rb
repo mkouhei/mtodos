@@ -49,7 +49,18 @@ describe Mtodos do
   it 'should fail to store the key in memcached after retrieve from udd' do
     cli = Mtodos::Client.new(UDD, cache_file: nil)
     expect(File.exist?('mtodos.cache')).to eq(false)
+    key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
     cli.retrieve
-    expect(cli.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(false)
+    expect(cli.sent?(key)).to eq(false)
+  end
+
+  it 'should fail to store the key in memcached specifing memacached server' do
+    cli = Mtodos::Client.new(UDD,
+                             cache_file: nil,
+                             memcached_server: 'localhost:11211')
+    expect(File.exist?('mtodos.cache')).to eq(false)
+    key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
+    cli.retrieve
+    expect(cli.sent?(key)).to eq(false)
   end
 end
