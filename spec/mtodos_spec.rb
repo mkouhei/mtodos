@@ -10,6 +10,7 @@ GLANEUSES = 'http://example.org/glaneuses.json'
 describe Mtodos do
   data = File.read('spec/data/udd.debian.org.json')
   glaneuses = File.read('spec/data/glaneuses.json')
+  key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
   stub_request(:any, 'udd.debian.org/dmd/')
     .with(query: { email1: 'dummy@example.org',
                    format: 'json' })
@@ -37,25 +38,24 @@ describe Mtodos do
   it 'store the key in cache after retrieve from udd' do
     cli = Mtodos::Client.new(UDD)
     cli.retrieve
-    expect(cli.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+    expect(cli.sent?(key)).to eq(true)
   end
 
   it 'store the key in cache after retrieve from glaneuses' do
     cli = Mtodos::Client.new(GLANEUSES)
     cli.retrieve
-    expect(cli.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+    expect(cli.sent?(key)).to eq(true)
   end
 
   it 'should load the key from the cache file' do
     cli = Mtodos::Client.new(UDD)
     cli.retrieve
-    expect(cli.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+    expect(cli.sent?(key)).to eq(true)
     cli2 = Mtodos::Client.new(UDD)
-    expect(cli2.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
+    expect(cli2.sent?(key)).to eq(true)
   end
 
   it 'should fail to load the key from the cache file' do
-    key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
     cli = Mtodos::Client.new(UDD)
     cli.retrieve
     File.exist?('mtodos.cache') && File.unlink('mtodos.cache')
@@ -68,7 +68,6 @@ describe Mtodos do
     cli = Mtodos::Client.new(UDD, cache_file: nil)
     allow(cli).to receive(:sent?).and_return(memcache_mock.get)
     expect(File.exist?('mtodos.cache')).to eq(false)
-    key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
     cli.retrieve
     expect(cli.sent?(key)).to eq(true)
   end
@@ -81,7 +80,6 @@ describe Mtodos do
                              memcached_server: 'localhost:11211')
     allow(cli).to receive(:sent?).and_return(memcache_mock.get)
     expect(File.exist?('mtodos.cache')).to eq(false)
-    key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
     cli.retrieve
     expect(cli.sent?(key)).to eq(true)
   end
