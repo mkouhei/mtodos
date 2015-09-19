@@ -54,6 +54,14 @@ describe Mtodos do
     expect(cli2.sent?('rc_std_ae0b0e7487e87af44c1b78efbbec037c')).to eq(true)
   end
 
+  it 'should fail to load the key from the cache file' do
+    key = 'rc_std_ae0b0e7487e87af44c1b78efbbec037c'
+    cli = Mtodos::Client.new(UDD)
+    cli.retrieve
+    File.exist?('mtodos.cache') && File.unlink('mtodos.cache')
+    expect(cli.sent?(key)).to eq(false)
+  end
+
   it 'should fail to store the key in memcached after retrieve from udd' do
     memcache_mock = double('memcached mock')
     allow(memcache_mock).to receive(:get).and_return(true)
