@@ -44,8 +44,9 @@ module Mtodos
 
   # retrieving ToDo and send notification client
   class Client
-    def initialize(url, cache_file: true, memcached_server: nil)
+    def initialize(url, notify_url, cache_file: true, memcached_server: nil)
       @url = url
+      @notify_url = notify_url
       if cache_file
         @cache = Cache.new
       else
@@ -109,9 +110,25 @@ module Mtodos
     end
 
     def notify(todo)
-      # TODO: change the send client some message system.
-      puts todo[':shortname']
-      store(todo[':shortname'])
+      pat_slack = %r{https://hooks.slack.com/services/}
+      @notify_url =~ pat_slack && post_slack(todo) && store(todo[':shortname'])
+    end
+
+    def post_slack(todo)
+      headers = { 'Content-Type' => 'application/json' }
+      uri = URI.parse(@notify_url)
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      case http.post(uri.path, message(todo).to_json, headers)
+      when Net::HTTPSuccess
+        true
+      else
+        false
+      end
+    end
+
+    def message(todo)
+      { text: todo[':shortname'] }
     end
   end
 end
