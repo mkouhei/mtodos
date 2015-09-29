@@ -128,7 +128,16 @@ module Mtodos
     end
 
     def message(todo)
-      { text: todo[':shortname'] }
+      if todo[':link']
+        msg = format('[%s] <%s|%s>: %s', todo[':source'], todo[':link'],
+                     todo[':description'], todo[':details'])
+      else
+        msg = format('[%s] %s: %s',
+                     todo[':source'], todo[':description'], todo[':details'])
+      end
+      { username: 'Debian Dashboard check bot',
+        icon_url: 'https://www.debian.org/logos/openlogo-nd-75.png',
+        text: msg }
     end
   end
 end
