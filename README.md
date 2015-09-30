@@ -24,7 +24,7 @@ Or install it yourself as:
 ## Usage
 
     irb> require 'mtodos'
-    irb> cli = Mtodos::Client.new 'https://udd.debian.org/dmd/?email1=mkouhei%40palmtb.net&format=json'
+    irb> cli = Mtodos::Client.new('https://udd.debian.org/dmd/?email1=mkouhei%40palmtb.net&format=json', 'https://hooks.slack.com/services/dummy/dummy/dummy')
     irb> cli.retrieve
 
 ## Development
