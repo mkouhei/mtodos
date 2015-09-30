@@ -6,7 +6,7 @@ include WebMock::API
 
 UDD = 'http://udd.debian.org/dmd/?email1=dummy%40example.org&format=json#todo'
 GLANEUSES = 'http://example.org/glaneuses.json'
-SLACK = ' https://hooks.slack.com/services/dummy/dummy/dummy'
+SLACK = 'https://hooks.slack.com/services/dummy/dummy/dummy'
 
 describe Mtodos do
   data = File.read('spec/data/udd.debian.org.json')
