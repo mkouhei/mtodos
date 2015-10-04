@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Mtodos::VERSION
   spec.authors       = ["Kouhei Maeda"]
   spec.email         = ["mkouhei@palmtb.net"]
+  spec.license       = 'GPL-3.0'
 
   spec.summary       = %q{Notification the ToDo of Debian package maintainer.}
   spec.description   = %q{Notify the high priority issues from the ToDo list on Debian "Maintainer dashboard (https://udd.debian.org/dmd/)" to the some messaging service.}
@@ -20,9 +21,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "webmock"
-  spec.add_development_dependency "simplecov"
-  spec.add_development_dependency "rubocop"
-  spec.add_dependency "memcached"
+  spec.add_development_dependency "rspec", '~> 3.3', '>= 3.3.0'
+  spec.add_development_dependency "webmock", '~> 1.21', '>= 1.21.0'
+  spec.add_development_dependency "simplecov", '~> 0.10', '>= 0.10.0'
+  spec.add_development_dependency "rubocop", '~> 0.34', '>= 0.34.2'
+  spec.add_dependency "memcached", "~> 1.8", '>= 1.8.0'
 end
