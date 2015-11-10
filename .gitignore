@@ -8,3 +8,4 @@ vendor/
 /spec/reports/
 /tmp/
 mtodos.cache
+.ruby-version
